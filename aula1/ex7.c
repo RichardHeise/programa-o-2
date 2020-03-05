@@ -9,16 +9,16 @@ int main () {
     scanf("%s", entrada);
 
     for (i = 0; i < strlen(entrada); i++) {
-        if (entrada[i] != ' ' ||
-           (entrada[i] >= 'A' && entrada[i] <= "Z") ||
-           (entrada[i] >= 'a' && entrada[i] <= "z") ||
-           (entrada[i] >= '0' && entrada[i] <= "9")) {
-               entrada[i]
-
+        if ((entrada[i] >= 'A' && entrada[i] <= 'Z') ||
+            (entrada[i] >= 'a' && entrada[i] <= 'z') ||
+            (entrada[i] >= '0' && entrada[i] <= '9')) {
+                printf("%c", entrada[i]);
+        } else {
+            printf("[%c]", entrada[i]);
         }
+        
     }
-
-    printf("Saída: %s\n", entrada);
+    entrada[i] = '\0';
 
     return 1;
 }

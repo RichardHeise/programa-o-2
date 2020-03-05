@@ -27,6 +27,12 @@ void parse (char str[100]) {
                 j++;
         }
     }
+    str[j] = '\0';
+
+    for (i = 0; i < strlen(str); i++) {     
+        if (str[i] >= 'a' && str[i] <= 'z') 
+        str[i] -= 32 ;
+    }
 }
 
 int main () {
@@ -34,11 +40,7 @@ int main () {
 
     scanf("%50[^\n]", entrada);
 
-    printf("%d", strlen(entrada));
-
     parse(entrada);
-
-    printf("%s", entrada);
 
     if (palindromo(entrada)) {
         printf("É palíndromo\n");

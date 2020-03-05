@@ -14,6 +14,11 @@ int busca (char ag[100], char pal[100]) {
         if (ag[i] == pal[j]) {
             ret = i;
             j++;
+        } else {
+            if (j != 0) {
+                i -= 1;
+            }
+            j = 0;
         }
 
         if (pal[j] == '\0') {
