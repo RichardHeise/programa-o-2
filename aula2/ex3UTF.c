@@ -6,6 +6,9 @@
 int main () {
     int i;
 
+
+    setlocale(LC_CTYPE, "pt_BR.iso88591");
+
     printf("TABELA ASCII: \n");
     for (i = 33; i < 126; i++) {
         if (i % 9 == 0) {

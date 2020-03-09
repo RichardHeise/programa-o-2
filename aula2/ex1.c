@@ -42,6 +42,8 @@ int main () {
 
     unsigned char entrada[100];
     
+    setlocale(LC_CTYPE, "pt_BR.iso88591");
+
     scanf("%s", entrada);
 
     parse(entrada);
