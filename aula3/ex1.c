@@ -5,13 +5,22 @@
 int main () {
     FILE* entrada;
 
-    entrada = fopen("arq.txt", "r");
+    entrada = fopen("arq.txt", "w");
     if (!entrada) exit(1);
 
-    int n;
-    for (i = 0; ! feof(entrada); i++) {
-        fget(entrada);
-    }
+    fputs("O rato roeu a roupa do rei de roma", entrada);
 
+    freopen("arq.txt", "r+", entrada);
+    if (! entrada) exit(1);
+
+    int i;
+    for (i = -1; ! feof(entrada); i++) {
+        fgetc(entrada);
+    }
+    printf("%d\n", i);
+
+    fclose(entrada);
+
+    exit(0);
 
 }
