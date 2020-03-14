@@ -26,15 +26,14 @@ int main (int argc, char **argv) {
         exit(4);
     }
 
-    char haysack[20];
-    fscanf(arq1, "%s", haysack);
+    char haystack[20];
+    fscanf(arq1, "%s", haystack);
     
-    printf("%s", haysack);
     while ( !feof(arq1) ) {
-        if (strstr(haysack, argv[1])) {
-            printf("%s\n", haysack);
+        if (strstr(haystack, argv[2])) {
+            printf("%s\n", haystack);
         }
-        fscanf(arq1, "%s", haysack);
+        fscanf(arq1, "%s", haystack);
     }
 
     fclose(arq1);
